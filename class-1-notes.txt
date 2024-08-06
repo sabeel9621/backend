@@ -1,0 +1,127 @@
+1 what is express
+so express is a javascript framework that helps in creating apis and handle asynchronous javascript request and response
+
+2.what is javascript framework
+any coding language whose parent is javascript is called as framework
+ek aisa coding language jo javascript ke upar likhi gai hai(nodejs ke upar)
+node ek set hai to express uska subset hai
+
+3.what is apis
+so is application programming interface
+it is a set of rules that allow two software programs to communicate with each other.
+frontend and backend
+matlab sir database mai siri files stored hai ab front end wale bhaiya ko infromation chahiye jo wo apne ui mai show kar sake ab unko wo data jis form mai bhejenge wo format json format hai
+json format mai hi maine data ko database ke andar store kiya hai
+lekin database se wo data front end tak le jane wala kaam express karegi kyuki express url/ api banane ka kam karti hai
+api actual mai url hi hai jo mutiple routes and endpoints se milkar bani hai
+
+IT engineer
+1. routes
+class1-12/arts/ba/llb
+class1-12/arts/ba/ma
+class1-12/science/btech
+class1-12/science/btech/mtech
+class1-12/science/btech/mba
+class1-12/science/bca/mca/mba
+class1-12/science/bsc
+class1-12/commerce/bba/mba
+
+2.jab app jis route mai the us time jo ghantaye apke saath ho rahi thi wo actually mai controller hai.
+
+3.co-cirrcular activites perform
+middlewares.
+login mai jo authetication and authorisation ka kaam hai wo middlewares dekhte hai , kisi data ko kis aur datatype mai convert karne ka kaam bhi middlewares dekhte hai, agar data front end se backend ya backend se front end ja raha hai to uss wakt data across the origin ja raha hai to time pe cross origin resource share ho raha hai to yeh middlewares ki responsibility hai ki data protected rahe to us time cors nam ki policy wala apne ap mai ek middleware hoga.
+
+4.jab data across the origin travel karege to yeh hume nahi pata ki wo kitna time lena wala hai soo in that case baki ka javascript program us data traveling ke liye wait na karein isiliye expressjs pura pura asynchronous javascript par based kiya gaya hai. iske liye javascript ka async await callback aur promise tino mai se koi ek use hoga
+
+5. request is the ask done by frontend side
+jab front end ko data chahiye hoti hai tab wo backend se data ki demand karta hai backend ki application (app) usko listen karega kisi ek port par (platform par jispar backend ka server launch kiya gaya hai ).
+
+
+express
+1. server
+2. routes
+3. controller
+4. middleware
+
+database :
+  1.database ke saath connection and configuration
+  2.ab database collection,schema, documents ===models
+  3.database ke saath data store and fetch hone wali
+
+connection and configuration
+
+models ke andar schema banai jati hai
+schema is the visual representation of single object stored inside database
+user=== id, email,password, phonenumber ===fields of infromations
+ka datatype kya hai aur yeh format mai stored hai iski design hi schema design kaha jata hai
+
+5. config
+6. models
+
+inside the terminal
+(1) npm initb -y
+(2) npm i mongoos express colors dotenv nodemon morgan
+
+browser client side
+nodejs server side
+what  is console ?
+console is the place where we can see the output of our code
+ what is the deffernce between   browser console and sytem terminal?
+ console is the place where we can see the output of our code inside any browser
+  system terminal is the place where we can see the output of our code in side any system
+
+  what is defference between servver and system?
+
+  server is the resource that is available in any regian at any weather condition and at any point of time
+
+
+  sytem the recourse that is not following any such criteria
+
+  server === system ==os
+  websystem
+  os
+  1. oprating system
+  2. webserver
+  3.web browser
+  4.web aplications
+  5.http moduls
+  6.file system
+  7.routing
+
+
+  server .js ====> sab kuch agr ise file file me ho jay
+  architector====> monolathic architector
+  devide=== distributive architector
+  model view controler >
+  1.
+  model== databace
+  view == front end
+  controler==backend
+
+
+system designs
+1. monolathic architector
+2.distributive architector
+3.microservices architector
+4.scalibility
+5.load balancing
+6.caching
+7.routing
+
+
+http matheds
+
+1.get : any information that is serve by the server to the frontend
+2.post : any information taken form frontend by the server
+3.put : any information updated by the server to the frontend
+4.delet: any information deleted by the server to the frontend
+5.patch : specific information updated by the server to the frontend
+kise bhe information ko create karna  ===> post
+information ko update krna ==> put patch
+delet krna==> delete
+our read karna==> Get
+
+browser prospective
+
+
