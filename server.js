@@ -126,43 +126,115 @@
 // 31 july class server file deploy on render ===================================================
 
 
+// const express = require("express");
+// const colors = require("colors");
+// const dotenv = require("dotenv").config();
+// const morgan = require("morgan");
+// const rootroute = require("./routes/rootroute");
+
+// const userdata = require("./utility/userdata.json");
+// const path = require("path");
+// const connectDB = require("./config/db");
+
+// const app = express();
+// const PORT = 7000 || 6000;
+// app.use(express.json());
+
+// app.use(express.static(path.resolve(__dirname, "./public/")));
+
+// app.get("/userdata", (req, res) => {
+//     res.send(userdata);
+// });
+
+// app.get("/", (req, res) => {
+//     res.sendFile(path.resolve(__dirname, "./public", "index.html"));
+// });
+
+// app.get("/contact", (req, res) => {
+//     res.sendFile(path.resolve(__dirname, "./public", "contact.html"));
+// });
+// app.get("/stopwatch", (req, res) => {
+//     res.sendFile(path.resolve(__dirname, "./public", "stopwatch.html"));
+// });
+
+// app.listen(PORT, () => {
+//     console.log(`server is listening on port ${PORT}`.blue);
+// });
+
+
+// database connection 1 aug class=========================
+
+
+// const express = require("express");
+// const colors = require("colors");
+// const dotenv = require("dotenv").config();
+// const morgan = require("morgan");
+// const path = require("path");
+// const connectDB = require("./config/db");
+
+
+// const app = express();
+// const PORT = process.env.PORT || 5000;
+
+// connectDB();
+
+// app.use(express.json());
+
+// app.get("/", (req, res) => {
+//     console.log("welcome to express");
+
+// });
+
+// app.listen(PORT, () => {
+//     console.log(`server is listening on ${PORT}`.yellow);
+// })
+
+
+
+// class 5 augst schema design express===============================================================================
+
 const express = require("express");
 const colors = require("colors");
-const dotenv = require("dotenv").config();
+const dotenv = require("dotenv");
+// const cors = require("cors");
 const morgan = require("morgan");
-const userdata = require("./utility/userdata.json");
-const path = require("path");
+const rootroute = require("./routes/rootroute");
+// const productroute = require("./routes/products/productroute");
+// const userroute = require("./routes/users/userroute");
+// const orderroute = require("./routes/orders/orderroute");
+// const {
+//     notFound,
+//     errorHandler,
+// } = require("./middlewares/errorHandlingMiddleware");
+const connectDB = require("./config/db");
+//express jo hai na wo server handling kar sakti hai
+//express ko server ke liye use karna hai
+//express ki properties ko humne app mai transfer/ assign kar diya
+//jisse hum http protocol ka use kar payenge jisme http methods ka access kar sakenge eg. get post put patch delete
+
+// dotenv.config();
+
+
+const PORT = process.env.PORT || 7000 || 6000;
 const app = express();
-const PORT = 5000;
+connectDB();
+
+// app.use("/", rootroute);
+// app.use("/products", productroute);
+// app.use("/users", userroute);
+// app.use("/orders", orderroute);
+
+// Error Handling middlewares
+// app.use(notFound);
+// app.use(errorHandler);
 
 app.use(express.json());
+app.use(morgan("dev"));
+app.get("/", rootroute);
 
-app.use(express.static(path.resolve(__dirname, "./public/")));
-
-app.get("/userdata", (req, res) => {
-    res.send(userdata);
-});
-
-app.get("/", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "./public", "index.html"));
-});
-
-app.get("/contact", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "./public", "contact.html"));
-});
-app.get("/stopwatch", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "./public", "stopwatch.html"));
-});
 
 app.listen(PORT, () => {
-    console.log(`server is listening on port ${PORT}`.blue);
+    console.log(`Server running on ${PORT}`.bgYellow.white);
 });
-
-
-
-
-
-
-
 
 
