@@ -60,7 +60,7 @@ ka datatype kya hai aur yeh format mai stored hai iski design hi schema design k
 6. models
 
 inside the terminal
-(1) npm initb -y
+(1) npm init -y
 (2) npm i mongoos express colors dotenv nodemon morgan
 
 browser client side
@@ -112,7 +112,7 @@ system designs
 
 http matheds
 
-1.get : any information that is serve by the server to the frontend
+1.get : any information that is served by the server to the frontend
 2.post : any information taken form frontend by the server
 3.put : any information updated by the server to the frontend
 4.delet: any information deleted by the server to the frontend

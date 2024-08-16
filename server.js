@@ -12,27 +12,27 @@
 // );
 
 
-// const express = require("express");
-// const colors = require("colors");
-// const morgan = require("morgan");
-// const dotenv = require("dotenv");
+const express = require("express");
+const colors = require("colors");
+const morgan = require("morgan");
+const dotenv = require("dotenv");
 
 
-// const PORT = 5000;
+const PORT = 5000;
 
-// const app = express();
+const app = express();
 
-// //properties of express transferd in to app
+//properties of express transferd in to app
 
-// app.use(express.json());
+app.use(express.json());
 
-// app.get('/', (req, res) => {
-//     res.send("hello word");
-// });
+app.get('/', (req, res) => {
+    res.send({"Massage":"welcome to home page"});
+});
 
-// app.listen(PORT, () => {
-//     console.log(`server is running on port ${PORT}`.bgBlue.black);
-// });
+app.listen(PORT, () => {
+    console.log(`server is running on port ${PORT}`.bgBlue.black);
+});
 
 
 //ofline \ c:\
@@ -193,48 +193,48 @@
 
 // class 5 augst schema design express===============================================================================
 
-const express = require("express");
-const colors = require("colors");
-const dotenv = require("dotenv");
-// const cors = require("cors");
-const morgan = require("morgan");
-const rootroute = require("./routes/rootroute");
-// const productroute = require("./routes/products/productroute");
-// const userroute = require("./routes/users/userroute");
-// const orderroute = require("./routes/orders/orderroute");
-// const {
-//     notFound,
-//     errorHandler,
-// } = require("./middlewares/errorHandlingMiddleware");
-const connectDB = require("./config/db");
-//express jo hai na wo server handling kar sakti hai
-//express ko server ke liye use karna hai
-//express ki properties ko humne app mai transfer/ assign kar diya
-//jisse hum http protocol ka use kar payenge jisme http methods ka access kar sakenge eg. get post put patch delete
+// const express = require("express");
+// const colors = require("colors");
+// const dotenv = require("dotenv");
+// // const cors = require("cors");
+// const morgan = require("morgan");
+// const rootroute = require("./routes/rootroute");
+// // const productroute = require("./routes/products/productroute");
+// // const userroute = require("./routes/users/userroute");
+// // const orderroute = require("./routes/orders/orderroute");
+// // const {
+// //     notFound,
+// //     errorHandler,
+// // } = require("./middlewares/errorHandlingMiddleware");
+// const connectDB = require("./config/db");
+// //express jo hai na wo server handling kar sakti hai
+// //express ko server ke liye use karna hai
+// //express ki properties ko humne app mai transfer/ assign kar diya
+// //jisse hum http protocol ka use kar payenge jisme http methods ka access kar sakenge eg. get post put patch delete
 
-// dotenv.config();
-
-
-const PORT = process.env.PORT || 7000 || 6000;
-const app = express();
-connectDB();
-
-// app.use("/", rootroute);
-// app.use("/products", productroute);
-// app.use("/users", userroute);
-// app.use("/orders", orderroute);
-
-// Error Handling middlewares
-// app.use(notFound);
-// app.use(errorHandler);
-
-app.use(express.json());
-app.use(morgan("dev"));
-app.get("/", rootroute);
+// // dotenv.config();
 
 
-app.listen(PORT, () => {
-    console.log(`Server running on ${PORT}`.bgYellow.white);
-});
+// const PORT = process.env.PORT || 7000 || 6000;
+// const app = express();
+// connectDB();
+
+// // app.use("/", rootroute);
+// // app.use("/products", productroute);
+// // app.use("/users", userroute);
+// // app.use("/orders", orderroute);
+
+// // Error Handling middlewares
+// // app.use(notFound);
+// // app.use(errorHandler);
+
+// app.use(express.json());
+// app.use(morgan("dev"));
+// app.get("/", rootroute);
+
+
+// app.listen(PORT, () => {
+//     console.log(`Server running on ${PORT}`.bgYellow.white);
+// });
 
 
